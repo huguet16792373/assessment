@@ -88,17 +88,30 @@ button.addEventListener('click',()=>{
   tweetDivision.innerText='';
   
 
-  const header=document.createElement('h3');
-  header.id='heading';
-  header.classList.add('face');
-  header.innerText='診断結果';
+  const header=document.createElement('div');
+  header.classList.add('card-header', 'text-bg-primary');
+  
+  const headingText = document.createElement('span');
+  headingText.id = 'heading';
+  headingText.classList.add('face');
+  headingText.innerText = '診断結果';
+  header.appendChild(headingText);
   resultDivision.appendChild(header);
+  requestAnimationFrame(() => {
   startRotation();
+});
+
+  const bodyDivision=document.createElement('div');
+  bodyDivision.setAttribute('class','card-body');
 
   const paragraph=document.createElement('p');
+  paragraph.setAttribute('class','card-text');
   const result=assessment(userName);
   paragraph.innerText=result;
-  resultDivision.appendChild(paragraph);
+  bodyDivision.appendChild(paragraph);
+
+  resultDivision.setAttribute('class','card');
+  resultDivision.appendChild(bodyDivision);
 
 
   const anchor =document.createElement('a');
