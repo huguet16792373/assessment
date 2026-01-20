@@ -25,6 +25,7 @@ const answers=[
   '###userName###のいいところは気配りです。###userName###の配慮が多くの人を救っています。',
   '###userName###のいいところはそのすべてです。ありのままの###userName###自身がいいところなのです。',
   '###userName###のいいところは自制心です。やばいと思ったときにしっかりと衝動を抑えられる###userName###が皆から評価されています。',
+  '###userName###のいいところは優しさです。あなたの優しい雰囲気や立ち振る舞いを多くの人が癒されています。'
 ]
 
 
@@ -126,6 +127,7 @@ button.addEventListener('click',()=>{
   const script = document.createElement('script');
   script.setAttribute('src', 'https://platform.twitter.com/widgets.js');
   tweetDivision.appendChild(script);
+
 
 
 })
